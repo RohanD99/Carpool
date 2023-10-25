@@ -1,0 +1,31 @@
+<div class="home-bg">
+  <app-navbar></app-navbar>
+  <div class="center-content">
+    <p class="custom-ride book-ride">Booked rides</p>
+    <div *ngIf="bookedRides.length > 0" >
+      <ul>
+        <li *ngFor="let ride of bookedRides">
+          <app-driver-card  [offerRides]="offeredRides"></app-driver-card>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="bookedRides.length === 0" class="rides-section">
+      No booked rides found.
+    </div>
+
+    <p class="custom-ride offer-ride">Offered rides</p>
+    <div *ngIf="offeredRides.length > 0" >
+      <ul>
+        <li *ngFor="let ride of offeredRides">
+          <app-driver-card ></app-driver-card>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="offeredRides.length === 0" class="rides-section">
+      No offered rides found.
+    </div>
+  </div>
+  <div>
+    <img src="assets/images/applicationbg.png" class="bg-img">
+  </div>
+</div>

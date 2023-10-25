@@ -1,0 +1,185 @@
+<div class="ride-card">
+    <div class="header">
+        <span class="ride-title">{{ isOffering ? 'Offer a Ride' : 'Book a Ride' }}</span>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" [(ngModel)]="isOffering" checked (click)="toggleOfferOrBook()">
+            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+        </div>
+    </div>
+    <span class="tag-line">we get you the matches asap!</span>
+
+    <form [formGroup]="offerRideForm" (ngSubmit)="submitData()">
+        <div *ngIf="isOffering" class="d-flex">
+            <div >
+                <div>
+                    <div class="column-content">
+                        <span class="letter">From</span>
+                        <input type="text" formControlName="startLocation">
+                        <div class="connector">
+                            <div class="circle"></div>
+                            <div class="small-circle"></div>
+                            <div class="small-circle"></div>
+                            <div class="small-circle"></div>
+                            <div class="small-circle"></div>
+                            <img class="purple-icon" src="assets/images/geo-alt-fill.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="column-content">
+                    <span class="letter">To</span>
+                    <input type="text" formControlName="endLocation">
+                </div>
+                <div class="column-content">
+                    <span class="letter">Date</span>
+                    <input type="date" formControlName="bookingDate" placeholder="xx/mm/yyyy">
+                </div>
+                <div class="column-content">
+                    <span class="letter">Time</span>
+                    <div class="timeslot">
+                        <div class="timeslot-row">
+                            <label class="timeslot-label">
+                                <input type="radio" name="bookingTime" value="5am-9am" (click)="selectBookingTime('5am-9am')">
+                                <span class="timeslot-button">5am-9am</span>
+                            </label>
+                            <label class="timeslot-label">
+                                <input type="radio" name="bookingTime" value="9am-12pm" (click)="selectBookingTime('9am-12pm')">
+                                <span class="timeslot-button">9am-12pm</span>
+                            </label>
+                            <label class="timeslot-label">
+                                <input type="radio" name="bookingTime" value="12pm-3pm" (click)="selectBookingTime('12pm-3pm')">
+                                <span class="timeslot-button">12pm-3pm</span>
+                            </label>
+                        </div>
+                        <div class="timeslot-row" id="afternoon">
+                            <label class="timeslot-label">
+                                <input type="radio" name="bookingTime" value="3pm-6pm" (click)="selectBookingTime('3pm-6pm')">
+                                <span class="timeslot-button">3pm-6pm</span>
+                            </label>
+                            <label class="timeslot-label">
+                                <input type="radio" name="bookingTime" value="6pm-9pm" (click)="selectBookingTime('6pm-9pm')">
+                                <span class="timeslot-button">6pm-9pm</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn" type="button">Next>></button>
+            </div>
+            <div class="ride-card">
+                <div class="header">
+                    <span class="ride-title">Offer a Ride</span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" [(ngModel)]="isOffering" checked (click)="toggleOfferOrBook()">
+                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                    </div>
+                </div>
+                <span class="tag-line">we get you the matches asap!</span>
+                <div class="stop-connector">
+                    <div class="circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <img class="purple-icon" src="assets/images/geo-alt-fill.svg">
+                </div>
+                <div class="column-content">
+                    <span class="letter">Stop 1</span>
+                    <input formControlName="stops1" [(ngModel)]="stopsArray[0].stopName">
+                </div>
+                <div class="column-content">
+                    <span class="letter">Stop 2</span>
+                    <input formControlName="stops2" [(ngModel)]="stopsArray[1].stopName">
+                </div>
+                <div class="column-content">
+                    <span class="letter">Stop 3</span>
+                    <input formControlName="stops3" [(ngModel)]="stopsArray[2].stopName">
+                    <button class="stop-button">+</button>
+                </div>       
+                <div class="seats-container">
+                    <div class="column-content">
+                        <span class="seats">Available seats</span>
+                        <div class="seats-button-container">
+                            <label class="seats-button" [class.selected]="selectedSeats === 1">
+                                <input type="radio"  value="1" (click)="selectAvailableSeats(1)"  style="display: none;">
+                                1
+                            </label>
+                            <label class="seats-button" [class.selected]="selectedSeats === 2">
+                                <input type="radio"  value="2" (click)="selectAvailableSeats(2)" style="display: none;">
+                                2
+                            </label>
+                            <label class="seats-button" [class.selected]="selectedSeats === 3">
+                                <input type="radio"  value="3" (click)="selectAvailableSeats(3)" style="display: none;">
+                                3
+                            </label>
+                        </div>
+                    </div>
+                    <div class="column-content">
+                        <span class="price-tag">Price</span>
+                        <input class="price" formControlName="price">
+                    </div>
+                </div>
+                <button class="offer-submit" type="submit" >Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <form [formGroup]="bookRideForm" (ngSubmit)="submitData()">
+        <div *ngIf="!isOffering" >
+            <div class="column-content">
+                <div class="connector">
+                    <div class="circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <div class="small-circle"></div>
+                    <img class="purple-icon" src="assets/images/geo-alt-fill.svg">
+                </div>
+                <span class="letter">From</span>
+                <input formControlName="startLocation">
+            </div>
+            <div class="column-content">
+                <span class="letter">To</span>
+                <input formControlName="endLocation">
+            </div>
+            <div class="column-content">
+                <span class="letter">Date</span>
+                <input type="date" formControlName="bookingDate" placeholder="xx/mm/yyyy">
+            </div>
+            <div class="column-content">
+                <span class="letter">Time</span>
+                <div class="timeslot">
+                    <div class="timeslot-row">
+                        <label class="timeslot-label">
+                            <input type="radio" name="bookingTime" value="5am-9am" (click)="selectBookingTime('5am-9am')">
+                            <span class="timeslot-button">5am-9am</span>
+                        </label>
+                        <label class="timeslot-label">
+                            <input type="radio" name="bookingTime" value="9am-12pm" (click)="selectBookingTime('9am-12pm')">
+                            <span class="timeslot-button">9am-12pm</span>
+                        </label>
+                        <label class="timeslot-label">
+                            <input type="radio" name="bookingTime" value="12pm-3pm" (click)="selectBookingTime('12pm-3pm')">
+                            <span class="timeslot-button">12pm-3pm</span>
+                        </label>
+                    </div>
+                    <div class="timeslot-row" id="afternoon">
+                        <label class="timeslot-label">
+                            <input type="radio" name="bookingTime" value="3pm-6pm" (click)="selectBookingTime('3pm-6pm')">
+                            <span class="timeslot-button">3pm-6pm</span>
+                        </label>
+                        <label class="timeslot-label">
+                            <input type="radio" name="bookingTime" value="6pm-9pm" (click)="selectBookingTime('6pm-9pm')">
+                            <span class="timeslot-button">6pm-9pm</span>
+                        </label>
+                    </div>
+                </div>
+             </div>
+            <button class="booking-submit" type="submit">Submit</button>
+        </div>
+    </form>
+</div>

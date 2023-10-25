@@ -1,0 +1,12 @@
+<div class="navbar">
+  <img src="assets/images/logo.png" class="logo">
+  <p class="user-name">{{ firstName }}</p>
+  <button mat-button [matMenuTriggerFor]="menu" class="user-profile">
+    <img src="assets/images/user-profile.png" class="user-profile">
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="userProfile()">Profile</button>
+    <button mat-menu-item (click)="userRides()">My Rides</button>
+    <button mat-menu-item (click)="logout()">Logout</button>
+  </mat-menu>
+</div>

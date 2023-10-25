@@ -1,0 +1,84 @@
+<div class="driver-card-container">
+
+  <div class="driver-card" *ngFor="let offerRide of offerRides" data-toggle="modal" data-target="#confirmRideModal" (click)="openConfirmRideModal()"> 
+    <div>
+      <span class="driver-name">{{user.firstName}}</span>
+      <img src="assets/images/user-profile.png" class="driver-profile">
+    </div>
+    <div>
+      <div class="details">
+        <div class="table-row">
+          <div class="location">
+            <label>From</label>
+            <p>{{ offerRide.startLocation }}</p>
+          </div>
+          <div class="connector">
+            <div class="circle"></div>
+            <div class="small-circle"></div>
+            <div class="small-circle"></div>
+            <div class="small-circle"></div>
+            <div class="small-circle"></div>
+            <img class="purple-icon" src="assets/images/geo-alt-fill.svg">
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="location-container">
+            <div class="location-icon">
+            </div>
+            <div class="purple-circle">
+              <div class="connecting-line"></div>
+              <div class="small-black-circles"></div>
+            </div>
+          </div>
+          <div class="destination">
+            <label>To</label>
+            <p>{{ offerRide.endLocation }}</p>
+          </div>
+        </div>
+      </div>
+      <div class ="details">
+        <div class="table-row">
+          <div class="date">
+            <label>Date</label>
+            <p>{{ offerRide.bookingDate }}</p>
+          </div>
+        </div>
+        <div class ="table-row">
+          <div class="time">
+            <label>Time</label>
+            <p>{{ offerRide.bookingTime }}</p>
+          </div>
+        </div>
+      </div>
+      <div class ="details">
+        <div class="price">
+          <div class="table-row">
+            <label>Price</label>
+            <p>{{ offerRide.pricePerSeat }}</p>
+          </div>
+        </div>
+        <div class ="table-row">
+          <div class="seats">
+            <label>Seats</label>
+            <p>{{ offerRide.availableSeats }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="confirmRideModal" tabindex="-1" role="dialog" aria-labelledby="confirmRideModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Do you want to book this ride?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary" (click)="confirmRide()">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+

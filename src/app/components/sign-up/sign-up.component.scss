@@ -1,0 +1,161 @@
+.main-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+
+    .home-bg {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .signup-form {
+        width: 30%;
+        background-color: orange;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+        padding-top: 110px;
+        background-image: url('/assets/images/formbg.png');
+        background-size: cover;
+    }
+
+    .name-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 10px;
+      }
+      
+      .name-container {
+        position: relative;
+        top: 40px;
+        margin-bottom: 20px; 
+        justify-content: space-between;
+      }
+
+    .signup-title {
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: system-ui;
+    }
+
+    .input-container{
+        margin-left: 110px;
+        padding-top: 15px;
+    }
+
+    .form-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .error-message{
+        position: relative;
+        top: -20px;
+        left: 10px;
+    }
+
+    .bg-img {
+        align-self: flex-start;
+        position: relative;
+        margin-top: 12px;
+    }
+
+    p {
+        font-size: 20px;
+        align-items: center;
+    }
+
+    .logo {
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    @font-face {
+        font-family: "Tajawal";
+        src: url(/assets/Images/Tajawal\ Black\ Regular.ttf);
+
+        font-family: "Mukta";
+        src: url(/assets/Images/Mukta\ Black\Mukta-Medium.ttf);
+    }
+
+    h1 {
+        font-style: italic;
+        font-size: 80px;
+        font-family: "Tajawal", sans-serif;
+        line-height: 70px;
+        font-weight: bold;
+        margin-left: 45px;
+    }
+
+    .name-inputs mat-form-field:first-child {
+        margin-right: 10px; 
+      }
+
+    .tag-line {
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 5px;
+        margin-left: 45px;
+    }
+
+    .top {
+        color: #ffac19;
+    }
+
+    .login{
+        font-family: system-ui;
+        font-weight: 650;
+        font-size: 17px;
+    }
+
+    .bottom {
+        color: #9319FF;
+    }
+
+    .heading {
+        margin-top: 30px;
+    }
+
+    .hr-line{
+        width: 25px;
+        position: relative;
+        left: 150px;
+        top: -13px;
+        border-top: 3px solid #fff;
+    }
+
+    .submit {
+        background-color: #9319FF;
+        color: whitesmoke;
+        border-radius: 25px;
+        width: 100px;
+        height: 35px;
+        position: relative;
+        left: 165px;
+        border: none;
+    }
+
+    .link {
+        color: whitesmoke;
+        margin-top: 27px;
+        text-decoration: auto;
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+
+    .underline {
+        width: 50px;
+        border-top: 3px solid white;
+        margin: 10px auto;
+        margin-top: 20px;
+        position: relative;
+        top: -10px;
+    }
+}

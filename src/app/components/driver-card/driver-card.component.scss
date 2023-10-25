@@ -1,0 +1,93 @@
+.driver-card {
+    width: 400px;
+    height: 255px;
+    border: 2px solid rgba(0, 0, 0, 0.193);
+    // margin-left: -160px;
+    border-radius: 5px;
+    margin-top: 160px;
+    background-color: white;
+    z-index: 10;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  .driver-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  label{
+    color: grey;
+    font-weight: 500;
+  }
+
+  .driver-profile{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 345px;
+    margin-top: 10px;
+  }
+
+  .driver-name{
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    top: 10px;
+    left: 18px;
+  }
+
+  .details{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .destination{
+    margin-right: 100px;
+  }
+
+  .time{
+    margin-right: 65px;
+  }
+
+  .seats{
+    margin-right: 97px;
+  }
+
+  .date,.price,.location{
+     position: relative;
+    left: 10px;
+  }
+
+  .connector {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin-top: -30px;
+    margin-left: 120px;
+  }
+  
+  .small-circle {
+    width: 7px;
+    height: 7px;
+    background-color: #ccc; 
+    border-radius: 50%;
+  }
+
+  .purple-icon {
+    filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(220deg);
+  }
+  
+  .circle{
+    width: 14px;
+    height: 14px;
+    background-color: #9319FF;
+    border-radius: 50%;
+    display: flex;
+    left: 2px;
+    position: relative;
+  }
+  

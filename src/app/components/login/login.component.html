@@ -1,0 +1,39 @@
+<div class="main-container">
+  <div class="home-bg">
+    <img src="assets/images/logo.png" class="logo">
+    <div class="heading">
+      <h1>TURN <span class="top"> MILES </span></h1>
+      <h1>INTO <span class="bottom">MONEY</span></h1>
+      <p class="slogan">RIDES ON TAP</p>
+    </div>
+    <img src="assets/images/homebg.png" class="bg-img">
+  </div>
+  <div class="login-form">
+    <div class="login-title text-center">Log In <div class="underline"></div>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>Enter Email Id</mat-label>
+          <input matInput formControlName="email" [type]="'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>Enter your password</mat-label>
+          <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+          </button>
+        </mat-form-field>
+      </div>
+      <button class="submit" type="submit">Submit</button>
+    </form>
+    <a class="link" [routerLink]="['']">Not a member yet ? <span class="login">SIGN UP
+        <hr class="hr-line">
+      </span></a>
+  </div>
+</div>

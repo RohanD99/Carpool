@@ -1,0 +1,98 @@
+.center-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    margin-left: 30px;
+  }
+  
+  
+  .custom-ride-box {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    align-items: flex-start;
+  }
+  
+  .dropdown {
+    top: 25px;
+    right: 39px;
+  }
+  
+  .book-ride-container {
+    position: relative;
+    top: 30px;
+  }
+  
+  .user-name {
+    font-size: 25px;
+    position: absolute;
+    right: 90px;
+    top: 23px;
+  }
+  .adjust{
+    position: relative;
+    top: 30px;
+  }
+  .card {
+    margin: 10px;
+  }
+  
+  .logo {
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  
+  .user-profile {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 5px;
+    border: none;
+    top: 0px;
+  }
+  
+  .dropdown {
+    background-color: #9319FF;
+  }
+  
+  .custom-ride {
+    width: 150px;
+    height: 40px;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .book-ride {
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-left: 40px;
+    background-color: #9319FF;
+    display: grid;
+  }
+  
+  .offer-ride {
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-left: 340px;
+    background-color: orange;
+  }
+  
+  .bg-img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }

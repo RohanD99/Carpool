@@ -1,0 +1,294 @@
+.ride-card {
+  width: 320px;
+  height: 500px;
+  border: 2px solid rgba(0, 0, 0, 0.193);
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 50px;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+}
+
+.ride-card:nth-child(2) {
+  transform: translate(50px, 50px);
+  left: 270px;
+  top: -100px;
+}
+
+.ride-form {
+  justify-content: space-around;
+  position: relative;
+  top: -20px;
+}
+
+
+.ride-title {
+  font-size: 30px;
+  font-weight: 800;
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.column-content input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  width: 80%;
+  position: relative;
+  top: 67px;
+  height: 25px;
+  outline: none;
+}
+
+.column-content .stop-button {
+  border: none;
+  background-color: white;
+  position: relative;
+  top: 34px;
+  left: 120px;
+  font-size: 25px;
+  color: blue;
+}
+
+.timeslot {
+  position: relative;
+  top: 76px;
+  left: 10px;
+}
+
+.next-btn {
+  position: relative;
+  top: 90px;
+  left: 230px;
+  border: none;
+  background-color: white;
+  color: #9319FF;
+  font-weight: 700;
+}
+
+.timeslot-morning {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  border-radius: 10px;
+  width: 190px;
+  height: auto;
+}
+
+.timeslot-afternoon {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  border-radius: 10px;
+  width: 190px;
+  height: auto;
+}
+
+.timeslot-button {
+  width: 90px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  border-color: #9319FF;
+  background-color: white;
+  color: black;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.timeslot-button:active {
+  background-color: #9319FF;
+  color: white;
+}
+
+input:focus {
+  border-color: #00f;
+}
+
+.connector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag-line {
+  color: grey;
+  font-weight: 400;
+  position: relative;
+  left: 23px;
+  font-size: 12px;
+}
+
+.form-switch {
+  position: relative;
+  left: 260px;
+}
+
+.form-check-input {
+  background-color: #9319FF;
+}
+
+.form-check-input:checked {
+  background-color: orange;
+}
+
+.letter {
+  color: gray;
+  margin-right: 230px;
+  position: relative;
+  top: 70px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.offer-submit {
+  width: 105px;
+  height: 42px;
+  color: white;
+  background-color: orange;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
+.booking-submit{
+  width: 105px;
+  height: 42px;
+  color: white;
+  background-color: orange;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  margin-top: 105px;
+  margin-left: 15px;
+}
+
+
+.seats-container {
+  display: flex;
+  position: relative;
+  top: 50px;
+  justify-content: space-around;
+  color: gray;
+  right: 10px;
+}
+
+.price-tag {
+  font-size: 13px;
+  position: relative;
+  color: grey;
+  font-weight: 500;
+  top: -20px;
+}
+
+.price{
+  left: 28px;
+  margin-top: -75px;
+}
+
+.seats-button {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  border-color: gray;
+  border: none;
+  margin: 5px;
+}
+
+.seats{
+  position: relative;
+  top: -20px;
+  font-size: 13px;
+}
+
+.seats-button-container {
+  position: relative;
+  left: 19px;
+  display: flex;
+  top: -15px;
+}
+
+.connector {
+  position: fixed;
+  top: 352px;
+  left: 340px;
+  display: grid
+}
+
+.stop-connector {
+  position: fixed;
+  top: 160px;
+  left: 290px;
+  display: grid;
+  gap: 5px;
+}
+
+.small-circle {
+  width: 7px;
+  height: 7px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  left: 5px;
+  position: relative;
+}
+
+.purple-icon {
+  filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(220deg);
+}
+
+.seats-button.selected {
+  background-color: #9319ff;
+  color: white;
+  position: relative;
+  padding: 8px;
+}
+
+.timeslot-button.selected{
+  background-color: #9319ff;
+  color: white;
+}
+
+.circle{
+  width: 14px;
+  height: 14px;
+  background-color: #9319FF;
+  border-radius: 50%;
+  display: flex;
+  left: 2px;
+  position: relative;
+}
+
+.timeslot-label input[type="radio"] {
+  display: none; 
+}
+
+.timeslot-label input[type="radio"] + .timeslot-button {
+  border: 1px solid #9319FF;;
+  border-radius: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.timeslot-label input[type="radio"]:checked + .timeslot-button {
+  background-color: #9319FF;
+  color: white;
+}
+
+#afternoon{
+  position: relative;
+  top: 15px;
+}

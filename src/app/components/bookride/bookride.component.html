@@ -1,0 +1,16 @@
+<div class="main-container">
+    <app-navbar></app-navbar>
+    <app-ride-form [currentStep]="currentStep1" (submitClicked)="onSubmit($event.value)" ></app-ride-form>
+  
+    <div class="match-span">Your Matches</div>
+    <div class="card-container">
+      <div class="cards" *ngIf="matchedRides.length > 0">
+        <app-driver-card  [offerRides]="matchedRides"></app-driver-card>
+      </div>
+      <div class="no-matches" *ngIf="matchedRides.length === 0 && showDriverCard">No Matches Found</div>
+    </div>
+    <div>
+      <img src="assets/images/applicationbg.png" class="bg-img">
+    </div>
+  </div>
+  
